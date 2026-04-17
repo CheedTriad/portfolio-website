@@ -1,22 +1,22 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, Gallery, Home, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Chidiere",
+  lastName: "Oluoma",
+  name: `Chidiere Oluoma`,
+  role: "Data & Business Analyst",
+  avatar: "/images/Chidi.jpg",
+  email: "chidiereoluoma+portfolio@gmail.com",
+  location: "Europe/London", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "German", "Igbo", "French"], // optional: Leave the array empty if you don't want to display languages
 };
 
-const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
-};
+// const newsletter: Newsletter = {
+//   display: true,
+//   title: <>Subscribe to {person.firstName}'s Blog</>,
+//   description: <>My weekly blog about life, creativity and computing ^-^</>,
+// };
 
 const social: Social = [
   // Links are automatically displayed.
@@ -25,26 +25,20 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/CheedTriad",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/chidiere-oluoma/",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
+    link: "https://www.instagram.com/chidiere_o",
     essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-    essential: true,
   },
   {
     name: "Email",
@@ -60,12 +54,12 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Analytical mind. Business instinct.</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Chidiere Oluoma</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
@@ -76,8 +70,9 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+Hi, I'm Chidiere, a <Text as="span" size="xl" weight="strong">Data / Business Analyst</Text>. 
+I help businesses understand what their numbers are actually saying.<br />
+Away from work, I build and break things in Python until they do something interesting.</>
   ),
 };
 
@@ -102,9 +97,8 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Chidiere is a final-year Computer Science student at De Montfort University, genuinely excited about data, strategy, and the overlap between them.
+        His background spans data analysis, machine learning, and stakeholder engagement, and he's at his best when a problem requires both technical rigour and clear communication to solve.
       </>
     ),
   },
@@ -113,41 +107,93 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Grosvenor Casino",
+        timeframe: "2025 - Present",
+        role: "Electronic Gaming Host",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Managed player data for 3,000+ active customers on the NEON platform, maintaining 100% audit-ready compliance records across GDPR-aligned access controls and incident logs.
           </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          // <>
+          //   Spearheaded the integration of AI tools into design workflows, enabling designers to
+          //   iterate 50% faster.
+          // </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Shipley Estates",
+        timeframe: "2023 - 2025",
+        role: "Team Supervisor",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Onboarded and trained 15 new staff on internal CRM and database systems, cutting average training time by consolidating technical guidance into a structured onboarding process.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Maintained operational database records across daily workflows, reducing data entry errors and improving resolution time on customer-facing system issues.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Ubisoft",
+        timeframe: "2024 - 2025",
+        role: "Player Support (English/German)",
+        achievements: [
+          <>
+            Delivered Tier 1 bilingual support using ticketing systems to troubleshoot in-game bugs, connectivity issues, and platform-specific errors.  </>,
+          <>
+            Resolved 40–70 Tier-1 tickets weekly (account/security: 2FA, recovery, linking); escalated ~10% of complex cases to engineering.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Goethe-Institut",
+        timeframe: "2018 - 2022",
+        role: "Administrative Assistant",
+        achievements: [
+          <>
+            Administered digital systems and internal platforms; coordinated event logistics, scheduling, and stakeholder communications using Microsoft Office and internal tools. 
+          </>,
+          <>
+            Produced bilingual (English/German) documentation and managed internal communications in a multicultural, high-volume environment.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "De Montfort University, Leicester",
+        timeframe: "2025 - Present",
+        role: "UG Faculty Lead Representative (Volunteer)",
+        achievements: [
+          <>
+            Represent student voice at senior faculty meetings, influencing decisions on curriculum and student support across 6 departments.
+          </>,
+          <>
+            Led a feedback initiative that gathered over 200+ student responses, resulting in tangible improvements to lab scheduling and course content delivery.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "De Montfort University, Leicester",
+        timeframe: "2025 - Present",
+        role: "Academic Board Student Representative (Volunteer)",
+        achievements: [
+          <>
+            Reviewed and challenged 100% of academic proposals brought to board level, ensuring every policy change was stress-tested against student impact before approval.
+          </>,
+          <>
+            Contributed to quality assurance discussions on assessment standards and curriculum design, representing undergraduate interests at the highest governance level in the university.
           </>,
         ],
         images: [],
@@ -156,15 +202,11 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "De Montfort University, Leicester, UK",
+        description: <>Computer Science B.Sc.(Hons).</>,
       },
     ],
   },
@@ -173,9 +215,9 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Python",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Able to build machine learning pipelines, analyse datasets, and generate actionable insights using Scikit-learn and Pandas.</>
         ),
         tags: [
           {
@@ -184,49 +226,73 @@ const about: About = {
           },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        // images: [
+        //   {
+        //     src: "/images/projects/project-01/cover-02.jpg",
+        //     alt: "Project image",
+        //     width: 16,
+        //     height: 9,
+        //   },
+        //   {
+        //     src: "/images/projects/project-01/cover-03.jpg",
+        //     alt: "Project image",
+        //     width: 16,
+        //     height: 9,
+        //   },
+        // ],
+      },
+      // {
+      //   title: "Next.js",
+      //   description: (
+      //     <>Building next gen apps with Next.js + Once UI + Supabase.</>
+      //   ),
+      //   tags: [
+      //     {
+      //       name: "JavaScript",
+      //       icon: "javascript",
+      //     },
+      //     {
+      //       name: "Next.js",
+      //       icon: "nextjs",
+      //     },
+      //     {
+      //       name: "Supabase",
+      //       icon: "supabase",
+      //     },
+      //   ],
+      //   // optional: leave the array empty if you don't want to display images
+      //   images: [
+      //     {
+      //       src: "/images/projects/project-01/cover-04.jpg",
+      //       alt: "Project image",
+      //       width: 16,
+      //       height: 9,
+      //     },
+      //   ],
+      // },
+      {
+        title: "Java",
+        description: (
+          <>Developed object-oriented applications with JavaFX interfaces and RESTful API integration.</>
+       ),
       },
       {
-        title: "Next.js",
+        title: "SQL",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+          <>Designed and queried relational databases across academic projects and live systems, including customer data management at Grosvenor Casino.</>
+       ),
+      },
+      {
+        title: "Machine Learning",
+        description: (
+          <>Implemented predictive models and pattern recognition algorithms using Scikit-learn, trained on real user behaviour data to generate personalised sustainability recommendations.</>
+       ),
+      },
+      {
+        title: "Data Analysis",
+        description: (
+          <>Extracted trends from complex datasets and translated findings into clear recommendations, presented to senior faculty and non-technical stakeholders at De Montfort University.</>
+       ),
       },
     ],
   },
@@ -235,7 +301,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about my life, tech, and everything in-between...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -243,7 +309,16 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
+  label: "Projects",
+  title: `Projects – ${person.name}`,
+  description: `Design and dev projects by ${person.name}`,
+  // Create new project pages by adding a new .mdx file to app/blog/posts
+  // All projects will be listed on the /home and /work routes
+};
+
+const organist: Organist = {
+  path: "/organist",
+  label: "Organist",
   title: `Projects – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
@@ -301,4 +376,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, home, about, blog, work, gallery, organist };

@@ -13,7 +13,7 @@ import {
 } from "@/types";
 import { home } from "./index";
 
-// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
+// IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema --
 const baseURL: string = "https://demo.magic-portfolio.com";
 
 const routes: RoutesConfig = {
@@ -21,6 +21,7 @@ const routes: RoutesConfig = {
   "/about": true,
   "/work": true,
   "/blog": true,
+  "/organist": true,
   "/gallery": true,
 };
 
@@ -195,9 +196,9 @@ const schema: SchemaConfig = {
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  //threads: "https://www.threads.com/@once_ui",
+  linkedin: "https://www.linkedin.com/in/chidiere-oluoma/",
+ // discord: "https://discord.com/invite/5EyAQ4eNdS",
 };
 
 // social sharing configuration for blog posts

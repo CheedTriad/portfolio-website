@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { PiPianoKeys } from "react-icons/pi";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
@@ -87,7 +88,7 @@ export const Header = () => {
           >
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                <ToggleButton prefixIcon="home" href="/" label="Home" selected={pathname === "/"} />
               )}
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
               {routes["/about"] && (
@@ -147,6 +148,27 @@ export const Header = () => {
                   </Row>
                 </>
               )}
+              {routes["/organist"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="book"
+                      href="/organist"
+                      label={"Organist"}
+                      selected={pathname.startsWith("/organist")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="book"
+                      href="/organist"
+                      selected={pathname.startsWith("/blog")}
+                    />
+                  </Row>
+                </>
+              )}
+
+
               {routes["/gallery"] && (
                 <>
                   <Row s={{ hide: true }}>
