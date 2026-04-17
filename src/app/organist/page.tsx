@@ -47,39 +47,42 @@ export default function Organist() {
       paddingY="xl"
     >
 
-      {/* ── HERO ── */}
-      <Flex
+     {/* ── HERO ── */}
+        <Flex
         direction="row"
         fillWidth
         gap="xl"
         vertical="center"
         wrap
-      >
-        <Flex direction="column" gap="m" flex={1} minWidth={280}>
-          <Heading variant="display-strong-l">
+        style={{ minHeight: "400px" }}
+        >
+        <Flex direction="column" gap="m" style={{ flex: 1, minWidth: "280px", maxWidth: "50%" }}>
+            <Heading variant="display-strong-l">
             Organist & Pianist
-          </Heading>
-          <Text variant="body-default-l" onBackground="neutral-weak">
+            </Heading>
+            <Text variant="body-default-l" onBackground="neutral-weak">
             Music for weddings, funerals, Mass, and concerts — 
             Leicester and surrounding areas.
-          </Text>
+            </Text>
         </Flex>
 
-        {/* Replace the src below with your actual organ photo */}
         <Flex
-          flex={1}
-          minWidth={280}
-          radius="l"
-          overflow="hidden"
-          style={{ aspectRatio: "3/4" }}
+            style={{ 
+            flex: 1, 
+            minWidth: "280px", 
+            maxWidth: "50%",
+            aspectRatio: "3/4",
+            borderRadius: "12px",
+            overflow: "hidden"
+            }}
         >
-          <img
+            <img
             src="/images/side_portrait.jpg"
             alt="Chidiere portrait"
             style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
-          />
-        </Flex>
-      </Flex>
+            />
+  </Flex>
+</Flex>
 
       <Line />
 
