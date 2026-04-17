@@ -11,7 +11,6 @@ export {
 
 export {
   display,
-  mailchimp,
   routes,
   protectedRoutes,
   baseURL,

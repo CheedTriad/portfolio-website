@@ -122,10 +122,10 @@ export type EffectsConfig = {
 /**
  * Mailchimp configuration for newsletter forms.
  */
-export type MailchimpConfig = {
-  action: string;
-  effects: EffectsConfig;
-};
+// export type MailchimpConfig = {
+//   action: string;
+//   effects: EffectsConfig;
+// };
 
 /**
  * Schema data for SEO/meta tags.
@@ -170,7 +170,6 @@ export type SocialSharingConfig = {
  */
 export type OnceUIConfig = {
   display: DisplayConfig;
-  mailchimp: MailchimpConfig;
   routes: RoutesConfig;
   protectedRoutes: ProtectedRoutesConfig;
   baseURL: string;
