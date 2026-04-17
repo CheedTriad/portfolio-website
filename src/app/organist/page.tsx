@@ -84,7 +84,7 @@ export default function Organist() {
       <Line />
 
       {/* ── BIOGRAPHY ── */}
-      <Flex direction="column" gap="m" fillWidth maxWidth="720px">
+      <Flex direction="column" gap="m" fillWidth maxWidth={720}>
         <Heading variant="heading-strong-l">About My Music</Heading>
         <Text variant="body-default-m" onBackground="neutral-weak">
           I have been playing the organ and piano for over a decade, 
@@ -104,7 +104,7 @@ export default function Organist() {
       {/* Second photo — at the organ, candid */}
       <Flex
         fillWidth
-        maxWidth="720px"
+        maxWidth={720}
         radius="l"
         overflow="hidden"
         style={{ aspectRatio: "16/9" }}
@@ -119,7 +119,7 @@ export default function Organist() {
       <Line />
 
       {/* ── REPERTOIRE ── */}
-      <Flex direction="column" gap="l" fillWidth maxWidth="960px">
+      <Flex direction="column" gap="l" fillWidth maxWidth={960}>
         <Heading variant="heading-strong-l">Repertoire</Heading>
         <Text variant="body-default-m" onBackground="neutral-weak">
           Below is a selection of pieces I regularly perform for weddings 
@@ -320,7 +320,7 @@ export default function Organist() {
       <Line />
 
       {/* ── CONTACT FORM ── */}
-      <Flex direction="column" gap="l" fillWidth maxWidth="560px">
+      <Flex direction="column" gap="l" fillWidth maxWidth={560}>
         <Heading variant="heading-strong-l">Book the Organist</Heading>
         <Text variant="body-default-m" onBackground="neutral-weak">
           Whether you have a date in mind or are still in the early stages 
