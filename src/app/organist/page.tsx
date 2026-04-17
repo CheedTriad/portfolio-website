@@ -60,8 +60,8 @@ export default function Organist() {
             <Heading variant="display-strong-l">
             Organist & Pianist
             </Heading>
-            <Text variant="body-default-l" onBackground="neutral-weak">
-            Music for weddings, funerals, Mass, and concerts — 
+            <Text variant="label-strong-m" onBackground="neutral-weak">
+            Music for weddings, funerals, Mass, and concerts in 
             Leicester and surrounding areas.
             </Text>
         </Flex>
@@ -137,7 +137,7 @@ export default function Organist() {
           <Column flex={1} minWidth={260} gap="m">
             <Heading variant="heading-strong-m">Weddings</Heading>
             <Line />
-            <Text variant="label-strong-m" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>PRELUDE & ARRIVAL</Text>
+            <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>PRELUDE & ARRIVAL</Text>
             {[
               "Spring from The Four Seasons - Vivaldi",
               "Hornpipe - Handel",
@@ -156,7 +156,7 @@ export default function Organist() {
                 {piece}
               </Text>
             ))}
-            <Text variant="label-strong-m" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>ENTRANCE OF THE BRIDE</Text>
+            <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>ENTRANCE OF THE BRIDE</Text>
             {[
               "Bridal March from Lohengrin - Wagner",
                 "Prince of Denmark's March - Clarke",
@@ -172,7 +172,7 @@ export default function Organist() {
                 {piece}
               </Text>
             ))}
-            <Text variant="label-strong-m" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>HYMNS</Text>
+            <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>HYMNS</Text>
             {[
               "All Things Bright and Beautiful",
                 "Jerusalem",
@@ -197,7 +197,7 @@ export default function Organist() {
                 {piece}
               </Text>
             ))}
-             <Text variant="label-strong-m" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>SIGNING OF THE REGISTER</Text>
+             <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>SIGNING OF THE REGISTER</Text>
             {[
               "Jesu, Joy of Man's Desiring - Bach",
                 "Canon in D - Pachelbel",
@@ -216,7 +216,7 @@ export default function Organist() {
                 {piece}
               </Text>
             ))}
-            <Text variant="label-strong-m" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>RECESSIONAL</Text>
+            <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>RECESSIONAL</Text>
             {[
               "Toccata in F - Widor",
                 "Wedding March from A Midsummer Night's Dream - Mendelssohn",
