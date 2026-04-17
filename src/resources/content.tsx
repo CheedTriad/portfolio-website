@@ -316,7 +316,7 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const organist: Organist = {
+const organist = {
   path: "/organist",
   label: "Organist",
   title: `Projects – ${person.name}`,
