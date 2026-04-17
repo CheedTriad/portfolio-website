@@ -57,14 +57,23 @@ export default function Organist() {
         style={{ minHeight: "400px" }}
         >
         <Flex direction="column" gap="m" style={{ flex: 1, minWidth: "280px", maxWidth: "50%" }}>
-            <Heading variant="display-strong-l">
-            Organist & Pianist
-            </Heading>
-            <Text variant="label-strong-m" onBackground="neutral-weak">
-            Music for weddings, funerals, Mass, and concerts in 
-            Leicester and surrounding areas.
-            </Text>
-        </Flex>
+        <Heading variant="display-strong-l">
+          Chidi — The Wandering Organist
+        </Heading>
+        <Text variant="body-default-l" onBackground="neutral-weak">
+          Welcome to the music side of this website.
+        </Text>
+        <Text variant="body-default-m" onBackground="neutral-weak">
+          I am a classical and choral organist, composer, music director, and YouTuber,
+          based at St Peter's Catholic Church in Leicester. I travel across the Midlands
+          and beyond, playing for weddings, funerals, organ inaugurations, and concerts
+          at churches, cathedrals, and venues across the country.
+        </Text>
+        <Text variant="body-default-m" onBackground="neutral-weak">
+          Below you will find my repertoire for weddings and funerals, and a form
+          to get in touch about bookings.
+        </Text>
+      </Flex>
 
         <Flex
             style={{ 
@@ -87,22 +96,36 @@ export default function Organist() {
       <Line />
 
       {/* ── BIOGRAPHY ── */}
-      <Flex direction="column" gap="m" fillWidth maxWidth={720}>
-        <Heading variant="heading-strong-l">About My Music</Heading>
-        <Text variant="body-default-m" onBackground="neutral-weak">
-          I have been playing the organ and piano for over a decade, 
-          serving as the organist and pianist for Mass at my parish in Leicester. 
-          My musical background spans classical repertoire, liturgical accompaniment, 
-          and solo performance — with a particular love for the French Romantic 
-          tradition and Bach.
-        </Text>
-        <Text variant="body-default-m" onBackground="neutral-weak">
-          I am available for weddings, funerals, memorial services, and concerts. 
-          I take time to understand what each occasion calls for and tailor the 
-          music accordingly — whether that means something joyful and grand, 
-          or quiet and contemplative.
-        </Text>
-      </Flex>
+<Flex direction="column" gap="m" fillWidth maxWidth={720}>
+  <Heading variant="heading-strong-l">About My Music</Heading>
+  <Text variant="body-default-m" onBackground="neutral-weak">
+    I have been playing the organ for fifteen years. It was a journey that began
+    with jazz and blues piano, moved through contemporary and classical piano,
+    and eventually found its home in classical organ. That progression shapes
+    how I approach every performance: technically grounded, musically flexible,
+    and always attentive to what the occasion actually needs.
+  </Text>
+  <Text variant="body-default-m" onBackground="neutral-weak">
+    Over those fifteen years I have played across denominations, styles, and
+    settings, from solemn requiem Masses and intimate graveside services, to
+    grand wedding processions, gala evenings, company events, and organ
+    inauguration recitals when a church receives a new instrument. The one
+    constant has been that I arrive prepared, and I
+    deliver what each occasion calls for.
+  </Text>
+  <Text variant="body-default-m" onBackground="neutral-weak">
+    I am resident organist at St Peter's Catholic Church on Hinckley Road,
+    Leicester, and regularly at Blessed Sacrament Church in Braunstone.
+    Beyond Leicester, I travel across the Midlands, the North, and throughout
+    England — distance is rarely a barrier if the occasion warrants it.
+  </Text>
+  <Text variant="body-default-m" onBackground="neutral-weak">
+    I am available for weddings, funerals, memorial services, organ recitals,
+    concert appearances, liturgical accompaniment, and special events.
+    If you have something in mind that doesn't fit neatly into a category,
+    get in touch anyway.
+  </Text>
+</Flex>
 
       {/* Second photo — at the organ, candid */}
       <Flex
@@ -131,193 +154,187 @@ export default function Organist() {
           please do get in touch.
         </Text>
 
-        <Row gap="xl" fillWidth wrap>
+       <Row gap="xl" fillWidth wrap>
 
-          {/* Weddings */}
-          <Column flex={1} minWidth={260} gap="m">
-            <Heading variant="heading-strong-m">Weddings</Heading>
-            <Line />
-            <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>PRELUDE & ARRIVAL</Text>
-            {[
-              "Spring from The Four Seasons - Vivaldi",
-              "Hornpipe - Handel",
-              "Jesu, Joy of Man's Desiring - Bach",
-              "Wachet Auf, ruft uns die Stimme BWV 645 - Bach",
-              "Sheep May Safely Graze - Bach",
-              "Largo from Xerxes - Handel",
-              "Canon in D - Pachelbel",
-              "Morning from Peer Gynt - Grieg",
-            ].map((piece) => (
-              <Text
-                key={piece}
-                variant="body-default-s"
-                onBackground="neutral-weak"
-              >
-                {piece}
-              </Text>
-            ))}
-            <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>ENTRANCE OF THE BRIDE</Text>
-            {[
-              "Bridal March from Lohengrin - Wagner",
-                "Prince of Denmark's March - Clarke",
-                "Air from Suite No. 3 - Bach",
-                "Canon in D - Pachelbel",
-                "Trumpet Tune - Purcell",
-            ].map((piece) => (
-              <Text
-                key={piece}
-                variant="body-default-s"
-                onBackground="neutral-weak"
-              >
-                {piece}
-              </Text>
-            ))}
-            <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>HYMNS</Text>
-            {[
-              "All Things Bright and Beautiful",
-                "Jerusalem",
-                "Lord of all Hopefulness",
-                "Come Down, O Love Divine",
-                "Guide me O Thou Great Redeemer",
-                "Immortal, Invisible, God only Wise",
-                "Love Divine, All Loves Excelling",
-                "Morning Has Broken",
-                "I Vow to Thee, My Country",
-                "Now Thank We All Our God",
-                "Praise My Soul the King of Heaven",
-                "Thine be the Glory",
-                "Lord of the Dance",
-                "Shine, Jesus Shine",
-            ].map((piece) => (
-              <Text
-                key={piece}
-                variant="body-default-s"
-                onBackground="neutral-weak"
-              >
-                {piece}
-              </Text>
-            ))}
-             <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>SIGNING OF THE REGISTER</Text>
-            {[
-              "Jesu, Joy of Man's Desiring - Bach",
-                "Canon in D - Pachelbel",
-                "Priere a Notre Dame - Boellmann",
-                "Nun Danket Alle Gott - Bach",
-                "Ode to Joy - Beethoven",
-                "Sheep May Safely Graze - Bach",
-                "Largo from Xerxes - Handel",
-                "Wachet Auf, ruft uns die Stimme BWV 645 - Bach",
-            ].map((piece) => (
-              <Text
-                key={piece}
-                variant="body-default-s"
-                onBackground="neutral-weak"
-              >
-                {piece}
-              </Text>
-            ))}
-            <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>RECESSIONAL</Text>
-            {[
-              "Toccata in F - Widor",
-                "Wedding March from A Midsummer Night's Dream - Mendelssohn",
-                "Hornpipe - Handel",
-                "Arrival of the Queen of Sheba - Handel",
-                "Grand March from Aida - Verdi",
-                "Marche-Sortie - Dubois",
-                "Nun Danket Alle Gott - Karg-Elert",
-                "Sortie in Eb - Lefebure-Wely",
-                "Wedding March from Symphony No. 3 - Saint-Saëns",
-                "Overture from Fireworks Music - Handel",
-            ].map((piece) => (
-              <Text
-                key={piece}
-                variant="body-default-s"
-                onBackground="neutral-weak"
-              >
-                {piece}
-              </Text>
-            ))}
+  {/* WEDDINGS */}
+  <Column
+    flex={1}
+    gap="m"
+    style={{ minWidth: "260px", maxWidth: "100%", wordBreak: "break-word" }}
+  >
+    <Heading variant="heading-strong-m">Weddings</Heading>
+    <Line />
 
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>PRELUDE & ARRIVAL</Text>
+    {[
+      "Spring from The Four Seasons - Vivaldi",
+      "Hornpipe - Handel",
+      "Jesu, Joy of Man's Desiring - Bach",
+      "Wachet Auf, ruft uns die Stimme BWV 645 - Bach",
+      "Sheep May Safely Graze - Bach",
+      "Largo from Xerxes - Handel",
+      "Canon in D - Pachelbel",
+      "Morning from Peer Gynt - Grieg",
+    ].map((piece) => (
+      <Text key={piece} variant="body-default-s" onBackground="neutral-weak" style={{ wordBreak: "break-word" }}>
+        {piece}
+      </Text>
+    ))}
 
-          </Column>
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>ENTRANCE OF THE BRIDE</Text>
+    {[
+      "Bridal March from Lohengrin - Wagner",
+      "Prince of Denmark's March - Clarke",
+      "Air from Suite No. 3 - Bach",
+      "Canon in D - Pachelbel",
+      "Trumpet Tune - Purcell",
+    ].map((piece) => (
+      <Text key={piece} variant="body-default-s" onBackground="neutral-weak" style={{ wordBreak: "break-word" }}>
+        {piece}
+      </Text>
+    ))}
 
-          {/* Funerals */}
-          <Column flex={1} minWidth={260} gap="m">
-            <Heading variant="heading-strong-m">Funerals & Memorials</Heading>
-            <Line />
-            <Text variant="label-strong-m" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>PROCESSIONAL</Text>
-            {[
-              "Largo from Xerxes - Handel",
-                "Adagio in G Minor - Albinoni",
-                "Air from Suite No. 3 - Bach",
-                "Canon in D - Pachelbel",
-                "Morning from Peer Gynt - Grieg",
-                "Jesu, Joy of Man's Desiring - Bach",
-                "Pie Jesu - Fauré",
-                "Ave Maria - Schubert",
-                "Laudate Dominum - Mozart",
-            ].map((piece) => (
-              <Text
-                key={piece}
-                variant="body-default-s"
-                onBackground="neutral-weak"
-              >
-                {piece}
-              </Text>
-            ))}
-            <Text variant="label-strong-m" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>HYMNS</Text>
-            {[
-              "All Things Bright and Beautiful",
-                "Jerusalem",
-                "Lord of all Hopefulness",
-                "The Lord's My Shepherd",
-                "Guide me O Thou Great Redeemer",
-                "Abide with Me",
-                "Love Divine, All Loves Excelling",
-                "Morning Has Broken",
-                "I Vow to Thee, My Country",
-                "Now Thank We All Our God",
-                "Praise My Soul the King of Heaven",
-                "Thine be the Glory",
-                "Lord of the Dance",
-                "Immortal, Invisible, God only Wise",
-                "Come Down, O Love Divine",
-            ].map((piece) => (
-              <Text
-                key={piece}
-                variant="body-default-s"
-                onBackground="neutral-weak"
-              >
-                {piece}
-              </Text>
-            ))}
-            <Text variant="label-strong-m" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>MUSIC ON DEPARTURE</Text>
-            {[
-              "Jesu, Joy of Man's Desiring - Bach",
-                "Nimrod from Enigma Variations - Elgar",
-                "Largo from Symphony No. 9 - Dvořák",
-                "Air from Suite No. 3 - Bach",
-                "Wachet Auf, ruft uns die Stimme - Bach",
-                "Prelude in C Minor BWV 546 - Bach",
-                "Chorale Prelude on Rhosymedre - Vaughan Williams",
-                "Elegy - Thalben-Ball",
-                "Hear my Prayer (O for the Wings of a Dove) - Mendelssohn",
-                "O Mensch, bewein' dein' Sünde groß BWV 622 - Bach",
-                "Ave verum corpus - Mozart",
-            ].map((piece) => (
-              <Text
-                key={piece}
-                variant="body-default-s"
-                onBackground="neutral-weak"
-              >
-                {piece}
-              </Text>
-            ))}
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>HYMNS</Text>
+    {[
+      "All Things Bright and Beautiful",
+      "Jerusalem",
+      "Lord of all Hopefulness",
+      "Come Down, O Love Divine",
+      "Guide me O Thou Great Redeemer",
+      "Immortal, Invisible, God only Wise",
+      "Love Divine, All Loves Excelling",
+      "Morning Has Broken",
+      "I Vow to Thee, My Country",
+      "Now Thank We All Our God",
+      "Praise My Soul the King of Heaven",
+      "Thine be the Glory",
+      "Lord of the Dance",
+      "Shine, Jesus Shine",
+    ].map((piece) => (
+      <Text key={piece} variant="body-default-s" onBackground="neutral-weak">
+        {piece}
+      </Text>
+    ))}
 
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>SIGNING OF THE REGISTER</Text>
+    {[
+      "Jesu, Joy of Man's Desiring - Bach",
+      "Canon in D - Pachelbel",
+      "Priere a Notre Dame - Boellmann",
+      "Nun Danket Alle Gott - Bach",
+      "Ode to Joy - Beethoven",
+      "Sheep May Safely Graze - Bach",
+      "Largo from Xerxes - Handel",
+      "Wachet Auf, ruft uns die Stimme BWV 645 - Bach",
+    ].map((piece) => (
+      <Text key={piece} variant="body-default-s" onBackground="neutral-weak" style={{ wordBreak: "break-word" }}>
+        {piece}
+      </Text>
+    ))}
 
-          </Column>
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>RECESSIONAL</Text>
+    {[
+      "Toccata in F - Widor",
+      "Wedding March from A Midsummer Night's Dream - Mendelssohn",
+      "Hornpipe - Handel",
+      "Arrival of the Queen of Sheba - Handel",
+      "Grand March from Aida - Verdi",
+      "Marche-Sortie - Dubois",
+      "Nun Danket Alle Gott - Karg-Elert",
+      "Sortie in Eb - Lefebure-Wely",
+      "Wedding March from Symphony No. 3 - Saint-Saëns",
+      "Overture from Fireworks Music - Handel",
+    ].map((piece) => (
+      <Text key={piece} variant="body-default-s" onBackground="neutral-weak" style={{ wordBreak: "break-word" }}>
+        {piece}
+      </Text>
+    ))}
+  </Column>
 
-        </Row>
+  {/* FUNERALS */}
+  <Column
+    flex={1}
+    gap="m"
+    style={{ minWidth: "260px", maxWidth: "100%", wordBreak: "break-word" }}
+  >
+    <Heading variant="heading-strong-m">Funerals & Memorials</Heading>
+    <Line />
+
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>PROCESSIONAL</Text>
+    {[
+      "Largo from Xerxes - Handel",
+      "Adagio in G Minor - Albinoni",
+      "Air from Suite No. 3 - Bach",
+      "Canon in D - Pachelbel",
+      "Morning from Peer Gynt - Grieg",
+      "Jesu, Joy of Man's Desiring - Bach",
+      "Pie Jesu - Fauré",
+      "Ave Maria - Schubert",
+      "Laudate Dominum - Mozart",
+    ].map((piece) => (
+      <Text key={piece} variant="body-default-s" onBackground="neutral-weak" style={{ wordBreak: "break-word" }}>
+        {piece}
+      </Text>
+    ))}
+
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>HYMNS</Text>
+    {[
+      "All Things Bright and Beautiful",
+      "Jerusalem",
+      "Lord of all Hopefulness",
+      "The Lord's My Shepherd",
+      "Guide me O Thou Great Redeemer",
+      "Abide with Me",
+      "Love Divine, All Loves Excelling",
+      "Morning Has Broken",
+      "I Vow to Thee, My Country",
+      "Now Thank We All Our God",
+      "Praise My Soul the King of Heaven",
+      "Thine be the Glory",
+      "Lord of the Dance",
+      "Immortal, Invisible, God only Wise",
+      "Come Down, O Love Divine",
+    ].map((piece) => (
+      <Text key={piece} variant="body-default-s" onBackground="neutral-weak">
+        {piece}
+      </Text>
+    ))}
+
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>COMMITTAL</Text>
+    {[
+      "Nimrod from Enigma Variations - Elgar",
+      "Canon in D - Pachelbel",
+      "Adagio in G Minor - Albinoni",
+      "Abide with Me (played softly)",
+      "Traumerei - Schumann",
+      "A Gaelic Blessing - Rutter",
+    ].map((piece) => (
+      <Text key={piece} variant="body-default-s" onBackground="neutral-weak" style={{ wordBreak: "break-word" }}>
+        {piece}
+      </Text>
+    ))}
+
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>MUSIC ON DEPARTURE</Text>
+    {[
+      "Jesu, Joy of Man's Desiring - Bach",
+      "Nimrod from Enigma Variations - Elgar",
+      "Largo from Symphony No. 9 - Dvořák",
+      "Air from Suite No. 3 - Bach",
+      "Wachet Auf, ruft uns die Stimme - Bach",
+      "Prelude in C Minor BWV 546 - Bach",
+      "Chorale Prelude on Rhosymedre - Vaughan Williams",
+      "Elegy - Thalben-Ball",
+      "Hear my Prayer (O for the Wings of a Dove) - Mendelssohn",
+      "O Mensch, bewein dein Sünde groß BWV 622 - Bach",
+      "Ave verum corpus - Mozart",
+    ].map((piece) => (
+      <Text key={piece} variant="body-default-s" onBackground="neutral-weak" style={{ wordBreak: "break-word" }}>
+        {piece}
+      </Text>
+    ))}
+  </Column>
+
+</Row>
       </Flex>
 
       <Line />

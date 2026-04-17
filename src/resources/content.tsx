@@ -70,9 +70,15 @@ const home: Home = {
   },
   subline: (
     <>
-Hi, I'm Chidiere, a <Text as="span" size="xl" weight="strong">Data / Business Analyst</Text>. 
-I help businesses understand what their numbers are actually saying.<br />
-Away from work, I build and break things in Python until they do something interesting.</>
+      Hi, I'm Chidiere, a{" "}
+      <Text as="span" size="xl" weight="strong">
+        Data / Business Analyst
+      </Text>
+      . I help businesses understand what their numbers are actually saying.
+      <br />
+      Away from work, I build and break things in Python until they do something
+      interesting.
+    </>
   ),
 };
 
@@ -97,8 +103,11 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Chidiere is a final-year Computer Science student at De Montfort University, genuinely excited about data, strategy, and the overlap between them.
-        His background spans data analysis, machine learning, and stakeholder engagement, and he's at his best when a problem requires both technical rigour and clear communication to solve.
+        Chidiere is a final-year Computer Science student at De Montfort
+        University, genuinely excited about data, strategy, and the overlap
+        between them. His background spans data analysis, machine learning, and
+        stakeholder engagement, and he's at his best when a problem requires
+        both technical rigour and clear communication to solve.
       </>
     ),
   },
@@ -112,7 +121,9 @@ const about: About = {
         role: "Electronic Gaming Host",
         achievements: [
           <>
-            Managed player data for 3,000+ active customers on the NEON platform, maintaining 100% audit-ready compliance records across GDPR-aligned access controls and incident logs.
+            Managed player data for 3,000+ active customers on the NEON
+            platform, maintaining 100% audit-ready compliance records across
+            GDPR-aligned access controls and incident logs.
           </>,
           // <>
           //   Spearheaded the integration of AI tools into design workflows, enabling designers to
@@ -135,10 +146,14 @@ const about: About = {
         role: "Team Supervisor",
         achievements: [
           <>
-            Onboarded and trained 15 new staff on internal CRM and database systems, cutting average training time by consolidating technical guidance into a structured onboarding process.
+            Onboarded and trained 15 new staff on internal CRM and database
+            systems, cutting average training time by consolidating technical
+            guidance into a structured onboarding process.
           </>,
           <>
-            Maintained operational database records across daily workflows, reducing data entry errors and improving resolution time on customer-facing system issues.
+            Maintained operational database records across daily workflows,
+            reducing data entry errors and improving resolution time on
+            customer-facing system issues.
           </>,
         ],
         images: [],
@@ -149,9 +164,13 @@ const about: About = {
         role: "Player Support (English/German)",
         achievements: [
           <>
-            Delivered Tier 1 bilingual support using ticketing systems to troubleshoot in-game bugs, connectivity issues, and platform-specific errors.  </>,
+            Delivered Tier 1 bilingual support using ticketing systems to
+            troubleshoot in-game bugs, connectivity issues, and
+            platform-specific errors.{" "}
+          </>,
           <>
-            Resolved 40–70 Tier-1 tickets weekly (account/security: 2FA, recovery, linking); escalated ~10% of complex cases to engineering.
+            Resolved 40–70 Tier-1 tickets weekly (account/security: 2FA,
+            recovery, linking); escalated ~10% of complex cases to engineering.
           </>,
         ],
         images: [],
@@ -162,10 +181,13 @@ const about: About = {
         role: "Administrative Assistant",
         achievements: [
           <>
-            Administered digital systems and internal platforms; coordinated event logistics, scheduling, and stakeholder communications using Microsoft Office and internal tools. 
+            Administered digital systems and internal platforms; coordinated
+            event logistics, scheduling, and stakeholder communications using
+            Microsoft Office and internal tools.
           </>,
           <>
-            Produced bilingual (English/German) documentation and managed internal communications in a multicultural, high-volume environment.
+            Produced bilingual (English/German) documentation and managed
+            internal communications in a multicultural, high-volume environment.
           </>,
         ],
         images: [],
@@ -176,10 +198,13 @@ const about: About = {
         role: "UG Faculty Lead Representative (Volunteer)",
         achievements: [
           <>
-            Represent student voice at senior faculty meetings, influencing decisions on curriculum and student support across 6 departments.
+            Represent student voice at senior faculty meetings, influencing
+            decisions on curriculum and student support across 6 departments.
           </>,
           <>
-            Led a feedback initiative that gathered over 200+ student responses, resulting in tangible improvements to lab scheduling and course content delivery.
+            Led a feedback initiative that gathered over 200+ student responses,
+            resulting in tangible improvements to lab scheduling and course
+            content delivery.
           </>,
         ],
         images: [],
@@ -190,10 +215,14 @@ const about: About = {
         role: "Academic Board Student Representative (Volunteer)",
         achievements: [
           <>
-            Reviewed and challenged 100% of academic proposals brought to board level, ensuring every policy change was stress-tested against student impact before approval.
+            Reviewed and challenged 100% of academic proposals brought to board
+            level, ensuring every policy change was stress-tested against
+            student impact before approval.
           </>,
           <>
-            Contributed to quality assurance discussions on assessment standards and curriculum design, representing undergraduate interests at the highest governance level in the university.
+            Contributed to quality assurance discussions on assessment standards
+            and curriculum design, representing undergraduate interests at the
+            highest governance level in the university.
           </>,
         ],
         images: [],
@@ -215,35 +244,76 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-  title: "Python",
-  description: (
-    <>Built machine learning pipelines and analysed datasets using Scikit-learn and Pandas, producing actionable insights from real-world sustainability data.</>
-  ),
-},
-{
-  title: "Java",
+        title: "Python",
         description: (
-          <>Developed object-oriented applications with JavaFX interfaces and RESTful API integration.</>
-       ),
+          <>
+            Built machine learning pipelines and analysed datasets using
+            Scikit-learn and Pandas, producing actionable insights from
+            real-world sustainability data.
+          </>
+        ),
+      },
+      {
+        title: "Java",
+        description: (
+          <>
+            Developed object-oriented applications with JavaFX interfaces and
+            RESTful API integration.
+          </>
+        ),
       },
       {
         title: "SQL",
         description: (
-          <>Designed and queried relational databases across academic projects and live systems, including customer data management at Grosvenor Casino.</>
-       ),
+          <>
+            Designed and queried relational databases across academic projects
+            and live systems, including customer data management at Grosvenor
+            Casino.
+          </>
+        ),
       },
       {
         title: "Machine Learning",
         description: (
-          <>Implemented predictive models and pattern recognition algorithms using Scikit-learn, trained on real user behaviour data to generate personalised sustainability recommendations.</>
-       ),
+          <>
+            Implemented predictive models and pattern recognition algorithms
+            using Scikit-learn, trained on real user behaviour data to generate
+            personalised sustainability recommendations.
+          </>
+        ),
       },
       {
         title: "Data Analysis",
         description: (
-          <>Extracted trends from complex datasets and translated findings into clear recommendations, presented to senior faculty and non-technical stakeholders at De Montfort University.</>
-       ),
+          <>
+            Extracted trends from complex datasets and translated findings into
+            clear recommendations, presented to senior faculty and non-technical
+            stakeholders at De Montfort University.
+          </>
+        ),
       },
+    ],
+  },
+  interests: {
+    display: true,
+    title: "Interests & Hobbies",
+    items: [
+      "Classical music & organ performance",
+      "Machine learning & data projects",
+      "Photography",
+      "Videography",
+      "Cooking",
+      "Cycling",
+      "Travelling",
+      "Gaming",
+      "Drone Piloting",
+      "3D Design",
+      "Languages",
+      "Fitness & table tennis",
+      "Chess",
+      "Smooth Jazz",
+      "Entrepreneurship",
+      "Faith & church ministry",
     ],
   },
 };

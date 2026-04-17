@@ -209,6 +209,15 @@ export interface About extends BasePageConfig {
       }>;
     }>;
   };
+   /** Interests and hobbies section */
+  interests: {
+    /** Whether to display interests section */
+    display: boolean;
+    /** Title for the interests section */
+    title: string;
+    /** List of interests */
+    items: string[];
+  };
 }
 
 /**
