@@ -55,7 +55,7 @@ export default function Organist() {
         vertical="center"
         wrap
       >
-        <Flex direction="column" gap="m" flex={1} minWidth="280px">
+        <Flex direction="column" gap="m" flex={1} minWidth={280}>
           <Heading variant="display-strong-l">
             Organist & Pianist
           </Heading>
@@ -68,7 +68,7 @@ export default function Organist() {
         {/* Replace the src below with your actual organ photo */}
         <Flex
           flex={1}
-          minWidth="280px"
+          minWidth={280}
           radius="l"
           overflow="hidden"
           style={{ aspectRatio: "3/4" }}
@@ -131,7 +131,7 @@ export default function Organist() {
         <Row gap="xl" fillWidth wrap>
 
           {/* Weddings */}
-          <Column flex={1} minWidth="260px" gap="m">
+          <Column flex={1} minWidth={260} gap="m">
             <Heading variant="heading-strong-m">Weddings</Heading>
             <Line />
             <Text variant="label-strong-m" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>PRELUDE & ARRIVAL</Text>
@@ -239,7 +239,7 @@ export default function Organist() {
           </Column>
 
           {/* Funerals */}
-          <Column flex={1} minWidth="260px" gap="m">
+          <Column flex={1} minWidth={260} gap="m">
             <Heading variant="heading-strong-m">Funerals & Memorials</Heading>
             <Line />
             <Text variant="label-strong-m" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>PROCESSIONAL</Text>

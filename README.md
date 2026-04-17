@@ -6,7 +6,7 @@ Focused on data analysis, machine learning, and the overlap between technology a
 
 <!-- View the demo [here](https://demo.magic-portfolio.com). -->
 
-![Magic Portfolio](public/images/og/demohomepage.jpg)
+![My Portfolio](public/images/og/demo_homepage.jpg)
 
 ## About
 I'm a final-year Computer Science student at De Montfort University, Leicester, on track for
@@ -33,15 +33,6 @@ This site covers my projects, work history, and technical background.
 - **Work** — Projects including the Carbon Footprint Tracker
 - **Gallery** — Visual work and data outputs
 
-
-
-
-## License
-
-Distributed under the CC BY-NC 4.0 License.
-- Attribution is required.
-- Commercial usage is not allowed.
-- You can extend the license to [Dopler CC](https://dopler.app/license) by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
 
 See `LICENSE.txt` for more information.
 
