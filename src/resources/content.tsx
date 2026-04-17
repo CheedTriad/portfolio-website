@@ -215,63 +215,13 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Python",
-        description: (
-          <>Built machine learning pipelines, analyse datasets, and generate actionable insights using Scikit-learn and Pandas.</>
-        ),
-        // tags: [
-        //   {
-        //     name: "Figma",
-        //     icon: "figma",
-           },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        // images: [
-        //   {
-        //     src: "/images/projects/project-01/cover-02.jpg",
-        //     alt: "Project image",
-        //     width: 16,
-        //     height: 9,
-        //   },
-        //   {
-        //     src: "/images/projects/project-01/cover-03.jpg",
-        //     alt: "Project image",
-        //     width: 16,
-        //     height: 9,
-        //   },
-        // ],
-      },
-      // {
-      //   title: "Next.js",
-      //   description: (
-      //     <>Building next gen apps with Next.js + Once UI + Supabase.</>
-      //   ),
-      //   tags: [
-      //     {
-      //       name: "JavaScript",
-      //       icon: "javascript",
-      //     },
-      //     {
-      //       name: "Next.js",
-      //       icon: "nextjs",
-      //     },
-      //     {
-      //       name: "Supabase",
-      //       icon: "supabase",
-      //     },
-      //   ],
-      //   // optional: leave the array empty if you don't want to display images
-      //   images: [
-      //     {
-      //       src: "/images/projects/project-01/cover-04.jpg",
-      //       alt: "Project image",
-      //       width: 16,
-      //       height: 9,
-      //     },
-      //   ],
-      // },
-      {
-        title: "Java",
+  title: "Python",
+  description: (
+    <>Built machine learning pipelines and analysed datasets using Scikit-learn and Pandas, producing actionable insights from real-world sustainability data.</>
+  ),
+},
+{
+  title: "Java",
         description: (
           <>Developed object-oriented applications with JavaFX interfaces and RESTful API integration.</>
        ),
