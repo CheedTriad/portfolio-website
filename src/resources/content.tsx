@@ -89,7 +89,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -217,13 +217,13 @@ const about: About = {
       {
         title: "Python",
         description: (
-          <>Able to build machine learning pipelines, analyse datasets, and generate actionable insights using Scikit-learn and Pandas.</>
+          <>Built machine learning pipelines, analyse datasets, and generate actionable insights using Scikit-learn and Pandas.</>
         ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+        // tags: [
+        //   {
+        //     name: "Figma",
+        //     icon: "figma",
+           },
         ],
         // optional: leave the array empty if you don't want to display images
         // images: [
@@ -319,8 +319,8 @@ const work: Work = {
 const organist = {
   path: "/organist",
   label: "Organist",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  title: `Organist – ${person.name}`,
+  description: `Music for weddings, funerals, and concerts by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

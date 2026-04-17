@@ -4,8 +4,6 @@ Personal portfolio website built to showcase my projects, experience, and techni
 Focused on data analysis, machine learning, and the overlap between technology and business strategy.
 
 
-<!-- View the demo [here](https://demo.magic-portfolio.com). -->
-
 ![My Portfolio](public/images/og/demo_homepage.jpg)
 
 ## About
