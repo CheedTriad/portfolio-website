@@ -144,6 +144,43 @@ export default function Organist() {
 
       <Line />
 
+      {/* ── SUPPORT ── */}
+      <Flex
+        direction="column"
+        gap="m"
+        fillWidth
+        maxWidth={720}
+        padding="l"
+        radius="l"
+        border="neutral-alpha-weak"
+      >
+        <Heading variant="heading-strong-m">Support the Music</Heading>
+        <Text variant="body-default-m" onBackground="neutral-weak">
+          If my playing has meant something to you at a service, through a 
+          video, or simply finding this page, you're welcome to show your support. 
+          Every contribution helps with travel, recording, and keeping the music going.
+        </Text>
+
+        <Row gap="m" wrap>
+          <Button
+            href="https://liberapay.com/chidiereoluoma"
+            prefixIcon="heart"
+            label="Support on Liberapay"
+            variant="primary"
+            target="_blank"
+          />
+          <Button
+            href="https://www.youtube.com/@chidiere_o"
+            prefixIcon="play"
+            label="Watch on YouTube"
+            variant="secondary"
+            target="_blank"
+          />
+        </Row>
+      </Flex>
+
+      <Line />
+
       {/* ── REPERTOIRE ── */}
       <Flex direction="column" gap="l" fillWidth maxWidth={960}>
         <Heading variant="heading-strong-l">Repertoire</Heading>

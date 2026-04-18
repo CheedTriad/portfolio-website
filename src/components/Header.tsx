@@ -152,7 +152,7 @@ export const Header = () => {
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="book"
+                      prefixIcon="piano"
                       href="/organist"
                       label={"Organist"}
                       selected={pathname.startsWith("/organist")}
@@ -160,7 +160,7 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
-                      prefixIcon="book"
+                      prefixIcon="piano"
                       href="/organist"
                       selected={pathname.startsWith("/blog")}
                     />

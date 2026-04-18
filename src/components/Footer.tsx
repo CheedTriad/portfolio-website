@@ -1,4 +1,4 @@
-import { Row, IconButton, SmartLink, Text } from "@once-ui-system/core";
+import { Row, IconButton, SmartLink, Text, Button } from "@once-ui-system/core";
 import { person, social } from "@/resources";
 import styles from "./Footer.module.scss";
 
@@ -30,6 +30,14 @@ export const Footer = () => {
             <SmartLink href="https://once-ui.com/products/magic-portfolio">Once UI</SmartLink>
           </Text>
         </Text>
+        <Button
+          href="https://liberapay.com/YOUR_LIBERAPAY_USERNAME"
+          prefixIcon="heart"
+          label="Support my work"
+          variant="secondary"
+          size="s"
+          target="_blank"
+        />
         <Row gap="16">
           {social.map(
             (item) =>
@@ -50,3 +58,4 @@ export const Footer = () => {
     </Row>
   );
 };
+
