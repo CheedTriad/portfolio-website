@@ -64,7 +64,7 @@ export default function Organist() {
         >
         <Heading
           variant="display-strong-m"
-          s={{ style: { textAlign: "center", width: "100%" } }}
+         style= {{ textAlign: "center", width: "100%" }}
         >
          The Wandering Organist
         </Heading>
