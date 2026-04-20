@@ -68,16 +68,16 @@ export default function Organist() {
         >
          The Wandering Organist
         </Heading>
-        <Text variant="body-default-l" onBackground="neutral-weak">
+        <Text variant="body-default-l" onBackground="neutral-weak" style= {{ textAlign: "center", width: "100%" }}>
           Welcome to the website of <b>'Chidi the Wandering Organist'</b> .
         </Text>
-        <Text variant="body-default-m" onBackground="neutral-weak">
+        <Text variant="body-default-m" onBackground="neutral-weak" style= {{ textAlign: "center", width: "100%" }}>
           I am a classical and choral organist, composer, music director, and YouTuber,
           based at St Peter's Catholic Church in Leicester. I travel across the United Kingdom
           and beyond, playing for weddings, funerals, organ inaugurations, and concerts
           at churches, cathedrals, and venues across the country.
         </Text>
-        <Text variant="body-default-m" onBackground="neutral-weak">
+        <Text variant="body-default-m" onBackground="neutral-weak" style= {{ textAlign: "center", width: "100%" }}>
           Below you will find my repertoire for weddings and funerals, and a form
           to get in touch about bookings.
         </Text>
@@ -105,7 +105,7 @@ export default function Organist() {
 
       {/* ── BIOGRAPHY ── */}
 <Flex direction="column" gap="m" fillWidth maxWidth={720}>
-  <Heading variant="heading-strong-l">About My Music</Heading>
+  <Heading variant="heading-strong-l" style= {{ textAlign: "center", width: "100%" }}>About My Music</Heading>
   <Text variant="body-default-m" onBackground="neutral-weak">
     I have been playing the organ for about fifteen years. It was a journey that began
     with jazz and blues piano, moved through contemporary and classical piano,

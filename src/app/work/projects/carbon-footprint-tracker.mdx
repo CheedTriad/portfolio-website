@@ -1,0 +1,47 @@
+---
+title: "ML-Powered Carbon Footprint Tracker App for Retail and Supply Chain"
+publishedAt: "2026-04-16"
+summary: "A machine learning application that analyses personal carbon emissions across activity categories and generates tailored sustainability recommendations in real time."
+images:
+  - "/images/projects/project-list/carbon-tracker/dashboard.png"
+  - "/images/projects/project-list/carbon-tracker/supply-chain.png"
+team:
+  - name: "Chidiere Oluoma"
+    role: "Developer & Data Scientist"
+    avatar: "/images/Chidi.jpg"
+    linkedIn: "https://www.linkedin.com/in/chidiere-oluoma/"
+link: "https://github.com/CheedTriad"
+---
+
+## Overview
+
+Most carbon analytics tools stop at reporting. This project goes further. It calculates emissions across the full supply chain lifecycle, uses machine learning to find where the biggest reduction opportunities are, and ranks intervention strategies by financial return.
+
+Although currently still being built as my final-year Computer Science final year project at De Montfort University, the platform combines a Python/Flask backend, a Dash analytics frontend, and a scikit-learn ML pipeline to deliver enterprise-level carbon analysis from real product emissions data.
+
+## Key Features
+
+- **GHG Protocol-Compliant Engine**: Calculates Scope 1, 2, and 3 emissions using verified emission factors and standard GHG Protocol methodology, replacing manual spreadsheet-based reporting.
+- **ML Hotspot Detection**: A K-means clustering pipeline analyses product-level carbon data across life cycle stages to surface emission hotspots that aggregate totals hide.
+- **Cost-Benefit Intervention Ranking**: Reduction strategies are ranked by ROI and payback period so sustainability teams get financially grounded recommendations, not generic advice.
+- **Supply Chain Benchmarking**: Supports cross-company and cross-product comparisons within a sector, letting organisations see how their emissions compare to industry peers.
+- **ESG Dashboard and Export**: An interactive Dash frontend visualises emissions breakdowns, hotspot maps, and intervention scenarios, with export functionality for CSRD-aligned reporting.
+
+## Technologies Used
+
+- **Python and Flask**: Backend and API layer, handling GHG Protocol calculations and data flow between components.
+- **Dash**: Frontend analytics dashboard. Chosen for native Python integration, removing the need for a separate JavaScript framework.
+- **scikit-learn**: ML pipeline for unsupervised hotspot detection and pattern recognition across product and stage-level emissions data.
+- **PostgreSQL**: Stores structured Carbon Catalogue records, stage-level breakdowns, and GreenMart operational data.
+- **Climatiq API**: Live emission factor lookups for GHG calculations across transport and energy categories.
+- **Carbon Catalogue Dataset**: 866 verified product carbon footprints (Nature Scientific Data, Kaack et al., 2022), used as the core data source.
+
+## Challenges
+
+The main challenge was building a useful ML layer on a dataset not designed for enterprise analytics. The Carbon Catalogue covers product-level footprints from multiple companies, so turning that into a coherent single-organisation supply chain view required reframing the full Food and Beverage subset as a synthetic enterprise dataset. This made cross-company benchmarking and stage-level decomposition possible where it otherwise would not have been.
+
+Scope control was the other major challenge. An early version included emissions forecasting, but this was cut after supervisor feedback to make sure the three core components (calculation engine, hotspot detection, and cost-benefit ranking) could each be built to a solid standard within the project timeline.
+
+## Outcome
+
+The platform shows how open-access emissions data combined with machine learning can move retail organisations from reactive ESG compliance toward active reduction planning. The GreenMart case study, a fictional retailer built on real Carbon Catalogue product data, demonstrates the full pipeline: data ingestion, emissions calculation, hotspot identification, and ranked intervention output.

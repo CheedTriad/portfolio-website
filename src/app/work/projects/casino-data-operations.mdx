@@ -1,0 +1,156 @@
+---
+title: "Casino Analytics Pipeline: From CRM Data to Predictive Intelligence"
+publishedAt: "2026-04-17"
+summary: "Built a four-layer analytics pipeline on top of Grosvenor Casino's CRM platform, covering machine floor mix analysis, member behaviour overlay, and a churn prediction model that scores 3,100 members weekly. All methodology developed from operational floor knowledge and synthetic data."
+images:
+  - "/images/projects/project-list/casino-data-ops/tables.jpg"
+  - "/images/projects/project-list/casino-data-ops/shop-floor.jpg"
+team:
+  - name: "Chidiere Oluoma"
+    role: "Electronic Gaming Host & Analyst"
+    avatar: "/images/Chidi.jpg"
+    linkedIn: "https://www.linkedin.com/in/chidiere-oluoma/"
+---
+
+## Overview
+
+Working as an Electronic Gaming Host at Grosvenor Casino Leicester, I manage daily operations on the venue's casino management platform, handling player data for over 3,000 active customers, operating responsible gambling controls, and maintaining GDPR-aligned compliance records.
+
+That operational access gave me something most analysts don't have: an inside view of exactly what the data contains, how it gets entered, where it's inconsistent, and what questions it can't yet answer. I used that knowledge to build an end-to-end analytics pipeline that extends what the platform already captures, and starts answering the questions it doesn't.
+
+The pipeline runs on synthetic data modelled from real platform outputs. The methodology is production-ready. Connecting it to a live export requires no new code.
+
+---
+
+## The Problem
+
+Most venue management platforms do their job well. They record what happened: how much went through each machine, how often members visited, what comps were issued. That's valuable operational data. The gap is in what comes next: turning that historical record into something that drives decisions.
+
+Three questions the platform couldn't answer on its own:
+
+**Which machines are actually most profitable?** Ranking by volume tells you which machines are busiest. It doesn't tell you which earn most efficiently per session, or whether a high-traffic machine is occupying floor space it doesn't justify.
+
+**Are the right members being retained?** A significant portion of revenue, particularly on the best-performing machines, comes from players with no account attached. No account means no comp eligibility, no visit history, no way to bring that person back.
+
+**Who is about to stop coming?** Churn rarely happens all at once. Members go quiet gradually, visits get less frequent, gaps get wider. Without a predictive layer, there's no way to identify that pattern early enough to act on it.
+
+These aren't problems unique to this venue. They're the standard gap between a CRM that records and an analytics layer that thinks.
+
+---
+
+## What I Built
+
+### Layer 1 — Synthetic Dataset
+
+Before any analysis could run, I needed a realistic dataset. Using anonymised structural outputs from the venue's management platform, I modelled 12 months of operational data:
+
+- **117 machines** across three zones with distinct performance profiles
+- **3,100 members** with visit frequency, loyalty tier, demographic, and behavioural attributes
+- **365 days** of daily summary data including visit counts, revenue, occupancy, and event flags
+- **6 data tables**: Machine Reference, Daily Summary, Member Registry, Hourly Occupancy, Weekly Machine Performance, Promotions & Comps
+
+All values were calibrated to match realistic operational ranges. The dataset is clearly labelled as synthetic throughout and contains no real customer data.
+
+**Stack**: Python, pandas, openpyxl, NumPy
+
+---
+
+### Layer 2 — Machine Floor Mix Analysis
+
+I built a **Revenue Efficiency Score** weighted across three dimensions: win per session (45%), average hold percentage (30%), and hold consistency — how often a machine produced a negative result over the period (25%).
+
+Machines are clustered **within their own category** using K-means. This is the critical design decision. A flat model would penalise table games for not performing like slots — they operate at a structurally different hold rate. Category-aware clustering means each machine is only judged against its genuine peers.
+
+The output is a four-tier ranking — Elite, Strong, Average, Review — for each machine type, alongside a direct comparison between the CRM's volume-based ranking and the efficiency-based ranking. The divergence between the two is where the actionable findings live: machines the platform ranks highly that efficiency analysis flags as underperforming, and machines the platform underrates that are quietly strong earners.
+
+**Stack**: Python, scikit-learn (K-means), matplotlib, openpyxl
+
+---
+
+### Layer 3 — Member Overlay
+
+With machine tiers established, the next question was whether the right members were playing the right machines — and whether the loyalty programme was reaching them effectively.
+
+The overlay joined member data to machine tier data to surface three things:
+
+**Tracked vs anonymous revenue**: A meaningful share of revenue on top-tier machines came from players with no account attached — no profile, no comp eligibility, no retention lever. The analysis quantified this gap and calculated what a modest improvement in account registration on those specific machines would be worth annually.
+
+**Loyalty tier distribution**: Higher-tier loyalty members generated significantly more revenue per session on top-tier machines than lower-tier members. The implication is that comp allocation based purely on visit frequency misses a more valuable targeting signal.
+
+**High-value member risk flags**: Members in upper loyalty tiers with declining visit frequency and low engagement on top-tier machines were identified as priority re-engagement candidates — people worth a personal contact before they lapse entirely.
+
+**Stack**: Python, pandas, matplotlib, scikit-learn
+
+---
+
+### Layer 4 — Churn Prediction Model
+
+The final layer is a supervised machine learning model that scores all 3,100 members by probability of lapsing within a defined window.
+
+Temporal features were generated using a behaviour-first approach — simulating member visit patterns via a random walk on monthly visit rates, then deriving churn labels probabilistically from the resulting behavioural signals. This prevents data leakage and produces realistic class overlap, which is what makes the model's performance figures credible rather than inflated.
+
+**Three models trained and compared:**
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>AUC</th>
+      <th>F1</th>
+      <th>Precision</th>
+      <th>Recall</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>0.820</td>
+      <td>0.594</td>
+      <td>0.701</td>
+      <td>0.516</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td><strong>0.847</strong></td>
+      <td><strong>0.651</strong></td>
+      <td>0.651</td>
+      <td>0.651</td>
+    </tr>
+    <tr>
+      <td>XGBoost</td>
+      <td>0.830</td>
+      <td>0.577</td>
+      <td>0.647</td>
+      <td>0.522</td>
+    </tr>
+  </tbody>
+</table>
+
+Random Forest was selected. AUC of 0.847 sits within the 0.75–0.88 range considered strong for a production churn model.
+
+SHAP analysis identified the top predictive signals: days since last visit, average spend per visit, time-of-day preference, recent visit count, and visit trend ratio comparing the last three months to the prior three months. The model doesn't just score — it explains, which makes the output usable by a non-technical team.
+
+The final output is a weekly action list with members segmented into four risk tiers, each with a recommended intervention. Critical-tier members get a personal contact within seven days. High-tier get a triggered offer within fourteen. Medium-tier are included in the next standard promo cycle.
+
+**Stack**: Python, scikit-learn, XGBoost, SHAP, imbalanced-learn (SMOTE), matplotlib, openpyxl
+
+---
+
+## Outputs
+
+Each layer produced a formatted Excel workbook with embedded charts and an executive summary:
+
+- Full synthetic dataset — 6 tables, 12 months
+- Machine floor mix analysis — rankings, tier summaries, rank divergence comparison
+- Member overlay — tracked vs anonymous breakdown, loyalty tier distribution, churn risk flags
+- Churn prediction model — model comparison, SHAP importance, all 3,100 members scored, weekly action list
+
+A 12-slide pitch deck translates the technical findings into business language for a non-analyst audience.
+
+---
+
+## What This Demonstrates
+
+This project sits at the intersection of domain knowledge and technical execution. The analytical decisions — category-aware clustering, behaviour-first churn label generation, SHAP explainability — were informed directly by understanding how the underlying data is produced in practice. That combination is what separates a technically correct model from one that's actually useful in a business context.
+
+The full codebase, methodology notes, and output files are available on GitHub.
