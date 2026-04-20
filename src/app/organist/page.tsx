@@ -55,17 +55,25 @@ export default function Organist() {
         vertical="center"
         wrap
         style={{ minHeight: "400px" }}
+        s={{ direction: "column", horizontal: "center" }}
         >
-        <Flex direction="column" gap="m" style={{ flex: 1, minWidth: "280px", maxWidth: "50%" }}>
-        <Heading variant="display-strong-l">
-          Chidi — The Wandering Organist
+        <Flex
+          direction="column"
+          gap="m"
+          style={{ flex: 1, minWidth: "280px", maxWidth: "50%" }}
+        >
+        <Heading
+          variant="display-strong-m"
+          s={{ style: { textAlign: "center", width: "100%" } }}
+        >
+         The Wandering Organist
         </Heading>
         <Text variant="body-default-l" onBackground="neutral-weak">
-          Welcome to the music side of this website.
+          Welcome to the website of <b>'Chidi the Wandering Organist'</b> .
         </Text>
         <Text variant="body-default-m" onBackground="neutral-weak">
           I am a classical and choral organist, composer, music director, and YouTuber,
-          based at St Peter's Catholic Church in Leicester. I travel across the Midlands
+          based at St Peter's Catholic Church in Leicester. I travel across the United Kingdom
           and beyond, playing for weddings, funerals, organ inaugurations, and concerts
           at churches, cathedrals, and venues across the country.
         </Text>
@@ -99,11 +107,9 @@ export default function Organist() {
 <Flex direction="column" gap="m" fillWidth maxWidth={720}>
   <Heading variant="heading-strong-l">About My Music</Heading>
   <Text variant="body-default-m" onBackground="neutral-weak">
-    I have been playing the organ for fifteen years. It was a journey that began
+    I have been playing the organ for about fifteen years. It was a journey that began
     with jazz and blues piano, moved through contemporary and classical piano,
-    and eventually found its home in classical organ. That progression shapes
-    how I approach every performance: technically grounded, musically flexible,
-    and always attentive to what the occasion actually needs.
+    and eventually found its home in classical organ.
   </Text>
   <Text variant="body-default-m" onBackground="neutral-weak">
     Over those fifteen years I have played across denominations, styles, and
@@ -175,6 +181,7 @@ export default function Organist() {
             label="Watch on YouTube"
             variant="secondary"
             target="_blank"
+            style={{ backgroundColor: "#FF0000", color: "#ffffff", borderColor: "#FF0000" }}
           />
         </Row>
       </Flex>
@@ -183,7 +190,7 @@ export default function Organist() {
 
       {/* ── REPERTOIRE ── */}
       <Flex direction="column" gap="l" fillWidth maxWidth={960}>
-        <Heading variant="heading-strong-l">Repertoire</Heading>
+        <Heading variant="heading-strong-l"style={{ textAlign: "center" }}>Repertoire</Heading>
         <Text variant="body-default-m" onBackground="neutral-weak">
           Below is a selection of pieces I regularly perform for weddings 
           and funerals. Every programme is tailored to your wishes — 
@@ -199,10 +206,10 @@ export default function Organist() {
     gap="m"
     style={{ minWidth: "260px", maxWidth: "100%", wordBreak: "break-word" }}
   >
-    <Heading variant="heading-strong-m">Weddings</Heading>
+    <Heading variant="heading-strong-m" style={{ textAlign: "center" }}>Weddings</Heading>
     <Line />
 
-    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>PRELUDE & ARRIVAL</Text>
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline", textAlign: "center"}}>PRELUDE & ARRIVAL</Text>
     {[
       "Spring from The Four Seasons - Vivaldi",
       "Hornpipe - Handel",
@@ -218,7 +225,7 @@ export default function Organist() {
       </Text>
     ))}
 
-    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>ENTRANCE OF THE BRIDE</Text>
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline", textAlign: "center" }}>ENTRANCE OF THE BRIDE</Text>
     {[
       "Bridal March from Lohengrin - Wagner",
       "Prince of Denmark's March - Clarke",
@@ -231,7 +238,7 @@ export default function Organist() {
       </Text>
     ))}
 
-    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>HYMNS</Text>
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline", textAlign: "center" }}>HYMNS</Text>
     {[
       "All Things Bright and Beautiful",
       "Jerusalem",
@@ -253,7 +260,7 @@ export default function Organist() {
       </Text>
     ))}
 
-    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>SIGNING OF THE REGISTER</Text>
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline", textAlign: "center" }}>SIGNING OF THE REGISTER</Text>
     {[
       "Jesu, Joy of Man's Desiring - Bach",
       "Canon in D - Pachelbel",
@@ -269,7 +276,7 @@ export default function Organist() {
       </Text>
     ))}
 
-    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>RECESSIONAL</Text>
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline", textAlign: "center" }}>RECESSIONAL</Text>
     {[
       "Toccata in F - Widor",
       "Wedding March from A Midsummer Night's Dream - Mendelssohn",
@@ -294,10 +301,10 @@ export default function Organist() {
     gap="m"
     style={{ minWidth: "260px", maxWidth: "100%", wordBreak: "break-word" }}
   >
-    <Heading variant="heading-strong-m">Funerals & Memorials</Heading>
+    <Heading variant="heading-strong-m" style={{ textAlign: "center" }}>Funerals & Memorials</Heading>
     <Line />
 
-    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>PROCESSIONAL</Text>
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline", textAlign: "center" }}>PROCESSIONAL</Text>
     {[
       "Largo from Xerxes - Handel",
       "Adagio in G Minor - Albinoni",
@@ -314,7 +321,7 @@ export default function Organist() {
       </Text>
     ))}
 
-    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>HYMNS</Text>
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline", textAlign: "center" }}>HYMNS</Text>
     {[
       "All Things Bright and Beautiful",
       "Jerusalem",
@@ -337,7 +344,7 @@ export default function Organist() {
       </Text>
     ))}
 
-    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>COMMITTAL</Text>
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline", textAlign: "center" }}>COMMITTAL</Text>
     {[
       "Nimrod from Enigma Variations - Elgar",
       "Canon in D - Pachelbel",
@@ -351,7 +358,7 @@ export default function Organist() {
       </Text>
     ))}
 
-    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline" }}>MUSIC ON DEPARTURE</Text>
+    <Text variant="label-strong-s" onBackground="neutral-weak" style={{ textDecoration: "underline", textAlign: "center" }}>MUSIC ON DEPARTURE</Text>
     {[
       "Jesu, Joy of Man's Desiring - Bach",
       "Nimrod from Enigma Variations - Elgar",
@@ -378,8 +385,8 @@ export default function Organist() {
 
       {/* ── CONTACT FORM ── */}
       <Flex direction="column" gap="l" fillWidth maxWidth={560}>
-        <Heading variant="heading-strong-l">Book the Organist</Heading>
-        <Text variant="body-default-m" onBackground="neutral-weak">
+        <Heading variant="heading-strong-l" style={{ textAlign: "center" }}>Book the Organist</Heading>
+        <Text variant="body-default-m" onBackground="neutral-weak" style={{ textAlign: "center" }}>
           Whether you have a date in mind or are still in the early stages 
           of planning, feel free to reach out. I'll get back to you within 
           48 hours.

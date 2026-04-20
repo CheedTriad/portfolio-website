@@ -31,7 +31,7 @@ export const Footer = () => {
           </Text>
         </Text>
         <Button
-          href="https://liberapay.com/YOUR_LIBERAPAY_USERNAME"
+          href="https://liberapay.com/chidiereoluoma"
           prefixIcon="heart"
           label="Support my work"
           variant="secondary"

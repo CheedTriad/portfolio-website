@@ -162,7 +162,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="piano"
                       href="/organist"
-                      selected={pathname.startsWith("/blog")}
+                      selected={pathname.startsWith("/organist")}
                     />
                   </Row>
                 </>
