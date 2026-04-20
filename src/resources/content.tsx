@@ -353,45 +353,211 @@ const gallery: Gallery = {
   
   images: [
     {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
+      src: "/images/gallery/image10.webp",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
+      src: "/images/gallery/image35.webp",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/vertical-2.jpg",
+      src: "/images/gallery/image58.webp",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
+      src: "/images/gallery/image59.webp",
       alt: "image",
       orientation: "vertical",
     },
+    {
+      src: "/images/gallery/image51.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image52.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image45.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image46.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image29.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image31.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image64.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image60.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image01.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image05.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image53.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image54.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image62.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image66.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image32.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image33.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image50.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image55.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image08.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image09.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image63.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image65.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image49.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/image56.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+
+
+    {
+       src: "/images/gallery/image17.webp",
+       alt: "image",
+       orientation: "horizontal",
+    },
+    {
+       src: "/images/gallery/image18.webp",
+       alt: "image",
+       orientation: "horizontal",
+    },
+    {
+       src: "/images/gallery/image19.webp",
+       alt: "image",
+       orientation: "horizontal",
+    },
+    {
+       src: "/images/gallery/image20.webp",
+       alt: "image",
+       orientation: "horizontal",
+    },
+    {
+       src: "/images/gallery/image21.webp",
+       alt: "image",
+       orientation: "horizontal",
+    },
+    {
+       src: "/images/gallery/image22.webp",
+       alt: "image",
+       orientation: "horizontal",
+    },
+    {
+       src: "/images/gallery/image24.webp",
+       alt: "image",
+       orientation: "horizontal",
+    },
+    {
+       src: "/images/gallery/image25.webp",
+       alt: "image",
+       orientation: "horizontal",
+    },
+    {
+       src: "/images/gallery/image21.webp",
+       alt: "image",
+       orientation: "horizontal",
+    },
+    {
+       src: "/images/gallery/image12.webp",
+       alt: "image",
+       orientation: "vertical",
+    },
+
+
+    // {
+    //   src: "/images/gallery/image__.webp",
+    //   alt: "image",
+    //   orientation: "vertical",
+    // },
+
+    // {
+    //   src: "/images/gallery/image__.webp",
+    //   alt: "image",
+    //   orientation: "horizontal",
+    // },
+    
   ],
 };
 
