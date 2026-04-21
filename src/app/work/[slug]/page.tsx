@@ -96,6 +96,28 @@ export default async function Project({
         <SmartLink href="/work">
           <Text variant="label-strong-m">Projects</Text>
         </SmartLink>
+        <Row gap="12" horizontal="center" vertical="center" marginTop="16">
+        {post.metadata.link && (
+          <Button
+            href={post.metadata.link}
+            label="View Project"
+            prefixIcon="arrowUpRight"
+            variant="primary"
+            size="s"
+            target="_blank"
+          />
+        )}
+        {post.metadata.github && (
+          <Button
+            href={post.metadata.github}
+            label="View on GitHub"
+            prefixIcon="github"
+            variant="secondary"
+            size="m"
+            target="_blank"
+          />
+        )}
+      </Row>
         <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
           {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
         </Text>
