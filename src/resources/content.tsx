@@ -353,6 +353,63 @@ const gallery: Gallery = {
   
   images: [
     {
+      src: "/images/gallery/Image041.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/Image031.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/Image011.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/Image081.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/Image101.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/Image091.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/Image111.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/Image051.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/Image061.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/Image071.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+    {
+      src: "/images/gallery/Image121.webp",
+      alt: "image",
+      orientation: "vertical",
+    },
+
+
+    {
       src: "/images/gallery/Image10.webp",
       alt: "image",
       orientation: "vertical",
