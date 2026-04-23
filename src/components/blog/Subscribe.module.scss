@@ -1,0 +1,20 @@
+.wrapper {
+  width: 100%;
+  padding: var(--static-space-24) var(--static-space-32);
+  border-radius: var(--radius-l);
+  border: 1px solid var(--neutral-alpha-weak);
+  background: var(--surface-background);
+  position: relative;
+  overflow: hidden;
+
+  /* Left brand accent bar */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--brand-solid-strong);
+  }
+}

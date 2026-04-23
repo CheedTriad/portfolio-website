@@ -12,8 +12,9 @@ import {
   Line,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
-import { Projects } from "@/components/work/Projects";
+import { ProjectsCarousel } from "@/components/work/ProjectsCarousel";
 import { Posts } from "@/components/blog/Posts";
+import { Subscribe } from "@/components/blog/Subscribe";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -100,7 +101,7 @@ export default function Home() {
         </Column>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
-        <Projects range={[1, 1]} />
+        <ProjectsCarousel />
       </RevealFx>
       {routes["/blog"] && (
         <Column fillWidth gap="24" marginBottom="l">
@@ -122,7 +123,7 @@ export default function Home() {
           </Row>
         </Column>
       )}
-      <Projects range={[2]} />
+      <Subscribe />
     </Column>
   );
 }
