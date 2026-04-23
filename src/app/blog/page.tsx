@@ -1,4 +1,4 @@
-import { Column, Heading, Text, RevealFx, Meta, Schema } from "@once-ui-system/core";
+import { Column, Heading, Text, Meta, Schema } from "@once-ui-system/core";
 import { Posts } from "@/components/blog/Posts";
 import { baseURL, blog, person, } from "@/resources";
 import { Subscribe } from "@/components/blog/Subscribe";
@@ -30,16 +30,12 @@ export default function Blog() {
         }}
       />
       <Column fillWidth paddingX="24" paddingTop="24" paddingBottom="32" gap="8" horizontal="center" align="center">
-        <RevealFx translateY="4" horizontal="center">
-          <Heading variant="display-strong-m" align="center">
-            {person.firstName}&apos;s Blog
-          </Heading>
-        </RevealFx>
-        <RevealFx translateY="8" delay={0.1} horizontal="center">
-          <Text variant="display-default-xs" onBackground="neutral-weak" align="center">
-            {blog.title}
-          </Text>
-        </RevealFx>
+        <Heading variant="display-strong-m" align="center">
+          {person.firstName}&apos;s Blog
+        </Heading>
+        <Text variant="display-default-xs" onBackground="neutral-weak" align="center">
+          {blog.title}
+        </Text>
       </Column>
       <Column fillWidth flex={1} gap="40">
         <Posts range={[1, 1]} thumbnail />

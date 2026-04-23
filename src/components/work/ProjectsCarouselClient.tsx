@@ -21,12 +21,16 @@ export function ProjectsCarouselClient({ projects }: ProjectsCarouselClientProps
   const trackRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const updateArrows = useCallback(() => {
     const el = trackRef.current;
     if (!el) return;
     setCanScrollLeft(el.scrollLeft > 1);
     setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 1);
+    const firstCard = el.firstElementChild as HTMLElement | null;
+    const cardWidth = firstCard ? firstCard.offsetWidth + 24 : el.clientWidth;
+    setActiveIndex(Math.round(el.scrollLeft / cardWidth));
   }, []);
 
   useEffect(() => {
@@ -120,6 +124,15 @@ export function ProjectsCarouselClient({ projects }: ProjectsCarouselClientProps
             tabIndex={canScrollRight ? 0 : -1}
           />
         </div>
+      </div>
+
+      <div className={styles.dots} aria-hidden="true">
+        {projects.map((_, i) => (
+          <span
+            key={i}
+            className={classNames(styles.dot, i === activeIndex && styles.dotActive)}
+          />
+        ))}
       </div>
     </div>
   );
