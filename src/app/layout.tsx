@@ -15,6 +15,7 @@ import {
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
 
 export async function generateMetadata() {
@@ -164,6 +165,7 @@ export default async function RootLayout({
             </Flex>
           </Flex>
           <Footer />
+          <GoogleAnalytics />
           <Analytics />
         </Column>
       </Providers>
