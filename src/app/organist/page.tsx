@@ -338,6 +338,8 @@ export default function Organist() {
       "Lord of the Dance",
       "Immortal, Invisible, God only Wise",
       "Come Down, O Love Divine",
+      "It is well with my Soul",
+      "Shall we gather at the River",
     ].map((piece) => (
       <Text key={piece} variant="body-default-s" onBackground="neutral-weak">
         {piece}
@@ -352,6 +354,7 @@ export default function Organist() {
       "Abide with Me (played softly)",
       "Traumerei - Schumann",
       "A Gaelic Blessing - Rutter",
+      "Rejoice in the Lord Alway - Purcell",
     ].map((piece) => (
       <Text key={piece} variant="body-default-s" onBackground="neutral-weak" style={{ wordBreak: "break-word" }}>
         {piece}
