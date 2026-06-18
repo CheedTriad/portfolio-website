@@ -41,7 +41,7 @@ These aren't problems unique to this venue. They're the standard gap between a C
 
 ## What I Built
 
-### Layer 1 — Synthetic Dataset
+### Layer 1: Synthetic Dataset
 
 Before any analysis could run, I needed a realistic dataset. Using anonymised structural outputs from the venue's management platform, I modelled 12 months of operational data:
 
@@ -56,25 +56,25 @@ All values were calibrated to match realistic operational ranges. The dataset is
 
 ---
 
-### Layer 2 — Machine Floor Mix Analysis
+### Layer 2: Machine Floor Mix Analysis
 
 I built a **Revenue Efficiency Score** weighted across three dimensions: win per session (45%), average hold percentage (30%), and hold consistency — how often a machine produced a negative result over the period (25%).
 
-Machines are clustered **within their own category** using K-means. This is the critical design decision. A flat model would penalise table games for not performing like slots — they operate at a structurally different hold rate. Category-aware clustering means each machine is only judged against its genuine peers.
+Machines are clustered **within their own category** using K-means. This is the critical design decision. A flat model would penalise table games for not performing like slots, which  operate at a structurally different hold rate. Category-aware clustering means each machine is only judged against its genuine peers.
 
-The output is a four-tier ranking — Elite, Strong, Average, Review — for each machine type, alongside a direct comparison between the CRM's volume-based ranking and the efficiency-based ranking. The divergence between the two is where the actionable findings live: machines the platform ranks highly that efficiency analysis flags as underperforming, and machines the platform underrates that are quietly strong earners.
+The output is a four-tier ranking (Elite, Strong, Average, Review) for each machine type, alongside a direct comparison between the CRM's volume-based ranking and the efficiency-based ranking. The divergence between the two is where the actionable findings live: machines the platform ranks highly that efficiency analysis flags as underperforming, and machines the platform underrates that are quietly strong earners.
 
 **Stack**: Python, scikit-learn (K-means), matplotlib, openpyxl
 
 ---
 
-### Layer 3 — Member Overlay
+### Layer 3: Member Overlay
 
-With machine tiers established, the next question was whether the right members were playing the right machines — and whether the loyalty programme was reaching them effectively.
+With machine tiers established, the next question was whether the right members were playing the right machines, and whether the loyalty programme was reaching them effectively.
 
 The overlay joined member data to machine tier data to surface three things:
 
-**Tracked vs anonymous revenue**: A meaningful share of revenue on top-tier machines came from players with no account attached — no profile, no comp eligibility, no retention lever. The analysis quantified this gap and calculated what a modest improvement in account registration on those specific machines would be worth annually.
+**Tracked vs anonymous revenue**: A meaningful share of revenue on top-tier machines came from players with no account attached, thus, no profile, no comp eligibility, no retention lever. The analysis quantified this gap and calculated what a modest improvement in account registration on those specific machines would be worth annually.
 
 **Loyalty tier distribution**: Higher-tier loyalty members generated significantly more revenue per session on top-tier machines than lower-tier members. The implication is that comp allocation based purely on visit frequency misses a more valuable targeting signal.
 
@@ -84,11 +84,11 @@ The overlay joined member data to machine tier data to surface three things:
 
 ---
 
-### Layer 4 — Churn Prediction Model
+### Layer 4: Churn Prediction Model
 
 The final layer is a supervised machine learning model that scores all 3,100 members by probability of lapsing within a defined window.
 
-Temporal features were generated using a behaviour-first approach — simulating member visit patterns via a random walk on monthly visit rates, then deriving churn labels probabilistically from the resulting behavioural signals. This prevents data leakage and produces realistic class overlap, which is what makes the model's performance figures credible rather than inflated.
+Temporal features were generated using a behaviour-first approach: simulating member visit patterns via a random walk on monthly visit rates, then deriving churn labels probabilistically from the resulting behavioural signals. This prevents data leakage and produces realistic class overlap, which is what makes the model's performance figures credible rather than inflated.
 
 **Three models trained and compared:**
 
@@ -129,7 +129,7 @@ Temporal features were generated using a behaviour-first approach — simulating
 
 Random Forest was selected. AUC of 0.847 sits within the 0.75–0.88 range considered strong for a production churn model.
 
-SHAP analysis identified the top predictive signals: days since last visit, average spend per visit, time-of-day preference, recent visit count, and visit trend ratio comparing the last three months to the prior three months. The model doesn't just score — it explains, which makes the output usable by a non-technical team.
+SHAP analysis identified the top predictive signals: days since last visit, average spend per visit, time-of-day preference, recent visit count, and visit trend ratio comparing the last three months to the prior three months. The model does more than just score; it explains clearly, which makes the output usable by a non-technical team.
 
 The final output is a weekly action list with members segmented into four risk tiers, each with a recommended intervention. Critical-tier members get a personal contact within seven days. High-tier get a triggered offer within fourteen. Medium-tier are included in the next standard promo cycle.
 
@@ -141,10 +141,10 @@ The final output is a weekly action list with members segmented into four risk t
 
 Each layer produced a formatted Excel workbook with embedded charts and an executive summary:
 
-- Full synthetic dataset — 6 tables, 12 months
-- Machine floor mix analysis — rankings, tier summaries, rank divergence comparison
-- Member overlay — tracked vs anonymous breakdown, loyalty tier distribution, churn risk flags
-- Churn prediction model — model comparison, SHAP importance, all 3,100 members scored, weekly action list
+- Full synthetic dataset: 6 tables, 12 months
+- Machine floor mix analysis: rankings, tier summaries, rank divergence comparison
+- Member overlay: tracked vs anonymous breakdown, loyalty tier distribution, churn risk flags
+- Churn prediction model: model comparison, SHAP importance, all 3,100 members scored, weekly action list
 
 A 12-slide pitch deck translates the technical findings into business language for a non-analyst audience.
 
@@ -152,6 +152,6 @@ A 12-slide pitch deck translates the technical findings into business language f
 
 ## What This Demonstrates
 
-This project sits at the intersection of domain knowledge and technical execution. The analytical decisions — category-aware clustering, behaviour-first churn label generation, SHAP explainability — were informed directly by understanding how the underlying data is produced in practice. That combination is what separates a technically correct model from one that's actually useful in a business context.
+This project sits at the intersection of domain knowledge and technical execution. The analytical decisions of category-aware clustering, behaviour-first churn label generation, and SHAP explainability were informed directly by understanding how the underlying data is produced in practice. That combination is what separates a technically correct model from one that's actually useful in a business context.
 
 The full codebase, methodology notes, and output files are available on GitHub.
