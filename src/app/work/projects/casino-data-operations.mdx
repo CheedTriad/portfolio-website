@@ -1,21 +1,7 @@
 ---
 title: "Casino Analytics Pipeline: From CRM Data to Predictive Intelligence"
 publishedAt: "2026-04-17"
-summary: "Built a four-layer analytics pipeline on top of Grosvenor Casino's CRM platform, covering machine floor mix analysis, member behaviour overlay, and a churn prediction model that scores 3,100 members weekly. All methodology developed from operational floor knowledge and synthetic data."
-images:
-  - "/images/projects/project-list/casino-data-ops/tables.jpg"
-  - "/images/projects/project-list/casino-data-ops/shop-floor.jpg"
-team:
-  - name: "Chidiere Oluoma"
-    role: "Electronic Gaming Host & Analyst"
-    avatar: "/images/Chidi.jpg"
-    linkedIn: "https://www.linkedin.com/in/chidiere-oluoma/"
-github: "https://github.com/CheedTriad/casino-analytics-pipeline"
----
----
-title: "Casino Analytics Pipeline: From CRM Data to Predictive Intelligence"
-publishedAt: "2026-04-17"
-summary: "Built a four-layer analytics pipeline on top of Grosvenor Casino's CRM platform, covering machine floor mix analysis, member behaviour overlay, and a churn prediction model that scores 3,100 members weekly. All methodology developed from operational floor knowledge and synthetic data."
+summary: "Built a four-layer analytics pipeline modelled on a UK casino venue's CRM platform, covering machine floor mix analysis, member behaviour overlay, and a churn prediction model that scores 3,100 members weekly. All methodology developed from operational floor knowledge and synthetic data."
 images:
   - "/images/projects/project-list/casino-data-ops/tables.jpg"
   - "/images/projects/project-list/casino-data-ops/shop-floor.jpg"
@@ -29,11 +15,11 @@ github: "https://github.com/CheedTriad/casino-analytics-pipeline"
 
 ## Overview
 
-Working as an Electronic Gaming Host at Grosvenor Casino Leicester, I manage daily operations on the venue's casino management platform, handling player data for over 3,000 active customers, operating responsible gambling controls, and maintaining GDPR-aligned compliance records.
+Working as an Electronic Gaming Host at a UK casino venue, I manage daily operations on the venue's casino management platform, handling player data for over 3,000 active customers, operating responsible gambling controls, and maintaining GDPR-aligned compliance records.
 
 That operational access gave me something most analysts don't have: an inside view of exactly what the data contains, how it gets entered, where it's inconsistent, and what questions it can't yet answer. I used that knowledge to build an end-to-end analytics pipeline that extends what the platform already captures, and starts answering the questions it doesn't.
 
-The pipeline runs on synthetic data modelled from real platform outputs. The methodology is production-ready. Connecting it to a live export requires no new code.
+The pipeline runs entirely on synthetic data, built to reflect realistic industry patterns rather than any specific venue's figures. The methodology is production-ready. Connecting it to a live export requires no new code.
 
 ---
 
@@ -49,7 +35,7 @@ Three questions the platform couldn't answer on its own:
 
 **Who is about to stop coming?** Churn rarely happens all at once. Members go quiet gradually, visits get less frequent, gaps get wider. Without a predictive layer, there's no way to identify that pattern early enough to act on it.
 
-These aren't problems unique to this venue. They're the standard gap between a CRM that records and an analytics layer that thinks.
+These aren't problems unique to any one venue. They're the standard gap between a CRM that records and an analytics layer that thinks.
 
 ---
 
@@ -57,7 +43,7 @@ These aren't problems unique to this venue. They're the standard gap between a C
 
 ### Layer 1: Synthetic Dataset
 
-Before any analysis could run, I needed a realistic dataset. Using anonymised structural outputs from the venue's management platform, I modelled 12 months of operational data:
+Before any analysis could run, I needed a realistic dataset. Drawing on general knowledge of how venue management platforms structure operational data, I modelled 12 months of synthetic operational data:
 
 - **117 machines** across three zones with distinct performance profiles
 - **3,100 members** with visit frequency, loyalty tier, demographic, and behavioural attributes
@@ -74,7 +60,7 @@ All values were calibrated to match realistic operational ranges. The dataset is
 
 I built a **Revenue Efficiency Score** weighted across three dimensions: win per session (45%), average hold percentage (30%), and hold consistency — how often a machine produced a negative result over the period (25%).
 
-Machines are clustered **within their own category** using K-means. This is the critical design decision. A flat model would penalise table games for not performing like slots, which  operate at a structurally different hold rate. Category-aware clustering means each machine is only judged against its genuine peers.
+Machines are clustered **within their own category** using K-means. This is the critical design decision. A flat model would penalise table games for not performing like slots, which operate at a structurally different hold rate. Category-aware clustering means each machine is only judged against its genuine peers.
 
 The output is a four-tier ranking (Elite, Strong, Average, Review) for each machine type, alongside a direct comparison between the CRM's volume-based ranking and the efficiency-based ranking. The divergence between the two is where the actionable findings live: machines the platform ranks highly that efficiency analysis flags as underperforming, and machines the platform underrates that are quietly strong earners.
 
@@ -166,72 +152,6 @@ A 12-slide pitch deck translates the technical findings into business language f
 
 ## What This Demonstrates
 
-This project sits at the intersection of domain knowledge and technical execution. The analytical decisions of category-aware clustering, behaviour-first churn label generation, and SHAP explainability were informed directly by understanding how the underlying data is produced in practice. That combination is what separates a technically correct model from one that's actually useful in a business context.
-
-The full codebase, methodology notes, and output files are available on GitHub.
-
-**Three models trained and compared:**
-
-<table>
-  <thead>
-    <tr>
-      <th>Model</th>
-      <th>AUC</th>
-      <th>F1</th>
-      <th>Precision</th>
-      <th>Recall</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Logistic Regression</td>
-      <td>0.820</td>
-      <td>0.594</td>
-      <td>0.701</td>
-      <td>0.516</td>
-    </tr>
-    <tr>
-      <td>Random Forest</td>
-      <td><strong>0.847</strong></td>
-      <td><strong>0.651</strong></td>
-      <td>0.651</td>
-      <td>0.651</td>
-    </tr>
-    <tr>
-      <td>XGBoost</td>
-      <td>0.830</td>
-      <td>0.577</td>
-      <td>0.647</td>
-      <td>0.522</td>
-    </tr>
-  </tbody>
-</table>
-
-Random Forest was selected. AUC of 0.847 sits within the 0.75–0.88 range considered strong for a production churn model.
-
-SHAP analysis identified the top predictive signals: days since last visit, average spend per visit, time-of-day preference, recent visit count, and visit trend ratio comparing the last three months to the prior three months. The model does more than just score; it explains clearly, which makes the output usable by a non-technical team.
-
-The final output is a weekly action list with members segmented into four risk tiers, each with a recommended intervention. Critical-tier members get a personal contact within seven days. High-tier get a triggered offer within fourteen. Medium-tier are included in the next standard promo cycle.
-
-**Stack**: Python, scikit-learn, XGBoost, SHAP, imbalanced-learn (SMOTE), matplotlib, openpyxl
-
----
-
-## Outputs
-
-Each layer produced a formatted Excel workbook with embedded charts and an executive summary:
-
-- Full synthetic dataset: 6 tables, 12 months
-- Machine floor mix analysis: rankings, tier summaries, rank divergence comparison
-- Member overlay: tracked vs anonymous breakdown, loyalty tier distribution, churn risk flags
-- Churn prediction model: model comparison, SHAP importance, all 3,100 members scored, weekly action list
-
-A 12-slide pitch deck translates the technical findings into business language for a non-analyst audience.
-
----
-
-## What This Demonstrates
-
-This project sits at the intersection of domain knowledge and technical execution. The analytical decisions of category-aware clustering, behaviour-first churn label generation, and SHAP explainability were informed directly by understanding how the underlying data is produced in practice. That combination is what separates a technically correct model from one that's actually useful in a business context.
+This project sits at the intersection of domain knowledge and technical execution. The analytical decisions of category-aware clustering, behaviour-first churn label generation, and SHAP explainability were informed directly by understanding how operational data like this is produced in practice. That combination is what separates a technically correct model from one that's actually useful in a business context.
 
 The full codebase, methodology notes, and output files are available on GitHub.
