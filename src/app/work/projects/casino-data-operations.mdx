@@ -12,6 +12,20 @@ team:
     linkedIn: "https://www.linkedin.com/in/chidiere-oluoma/"
 github: "https://github.com/CheedTriad/casino-analytics-pipeline"
 ---
+---
+title: "Casino Analytics Pipeline: From CRM Data to Predictive Intelligence"
+publishedAt: "2026-04-17"
+summary: "Built a four-layer analytics pipeline on top of Grosvenor Casino's CRM platform, covering machine floor mix analysis, member behaviour overlay, and a churn prediction model that scores 3,100 members weekly. All methodology developed from operational floor knowledge and synthetic data."
+images:
+  - "/images/projects/project-list/casino-data-ops/tables.jpg"
+  - "/images/projects/project-list/casino-data-ops/shop-floor.jpg"
+team:
+  - name: "Chidiere Oluoma"
+    role: "Electronic Gaming Host & Analyst"
+    avatar: "/images/Chidi.jpg"
+    linkedIn: "https://www.linkedin.com/in/chidiere-oluoma/"
+github: "https://github.com/CheedTriad/casino-analytics-pipeline"
+---
 
 ## Overview
 
@@ -89,6 +103,72 @@ The overlay joined member data to machine tier data to surface three things:
 The final layer is a supervised machine learning model that scores all 3,100 members by probability of lapsing within a defined window.
 
 Temporal features were generated using a behaviour-first approach: simulating member visit patterns via a random walk on monthly visit rates, then deriving churn labels probabilistically from the resulting behavioural signals. This prevents data leakage and produces realistic class overlap, which is what makes the model's performance figures credible rather than inflated.
+
+**Three models trained and compared:**
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>AUC</th>
+      <th>F1</th>
+      <th>Precision</th>
+      <th>Recall</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logistic Regression</td>
+      <td>0.820</td>
+      <td>0.594</td>
+      <td>0.701</td>
+      <td>0.516</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td><strong>0.847</strong></td>
+      <td><strong>0.651</strong></td>
+      <td>0.651</td>
+      <td>0.651</td>
+    </tr>
+    <tr>
+      <td>XGBoost</td>
+      <td>0.830</td>
+      <td>0.577</td>
+      <td>0.647</td>
+      <td>0.522</td>
+    </tr>
+  </tbody>
+</table>
+
+Random Forest was selected. AUC of 0.847 sits within the 0.75–0.88 range considered strong for a production churn model.
+
+SHAP analysis identified the top predictive signals: days since last visit, average spend per visit, time-of-day preference, recent visit count, and visit trend ratio comparing the last three months to the prior three months. The model does more than just score; it explains clearly, which makes the output usable by a non-technical team.
+
+The final output is a weekly action list with members segmented into four risk tiers, each with a recommended intervention. Critical-tier members get a personal contact within seven days. High-tier get a triggered offer within fourteen. Medium-tier are included in the next standard promo cycle.
+
+**Stack**: Python, scikit-learn, XGBoost, SHAP, imbalanced-learn (SMOTE), matplotlib, openpyxl
+
+---
+
+## Outputs
+
+Each layer produced a formatted Excel workbook with embedded charts and an executive summary:
+
+- Full synthetic dataset: 6 tables, 12 months
+- Machine floor mix analysis: rankings, tier summaries, rank divergence comparison
+- Member overlay: tracked vs anonymous breakdown, loyalty tier distribution, churn risk flags
+- Churn prediction model: model comparison, SHAP importance, all 3,100 members scored, weekly action list
+
+A 12-slide pitch deck translates the technical findings into business language for a non-analyst audience.
+
+---
+
+## What This Demonstrates
+
+This project sits at the intersection of domain knowledge and technical execution. The analytical decisions of category-aware clustering, behaviour-first churn label generation, and SHAP explainability were informed directly by understanding how the underlying data is produced in practice. That combination is what separates a technically correct model from one that's actually useful in a business context.
+
+The full codebase, methodology notes, and output files are available on GitHub.
 
 **Three models trained and compared:**
 
